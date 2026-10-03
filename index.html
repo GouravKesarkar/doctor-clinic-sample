@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Greenleaf Family Clinic | Dr. Meera Kulkarni, General Physician</title>
+<meta name="description" content="Greenleaf Family Clinic: friendly, unhurried primary care for the whole family. Same-day appointments, vaccinations, diabetes and blood pressure care.">
+<meta name="theme-color" content="#0f3d3e">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f3d3e'/%3E%3Cpath d='M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#12292b; --muted:#4d6567; --bg:#f7faf9; --card:#fff; --line:#d9e5e3;
+  --deep:#0f3d3e; --brand:#0f766e; --mint:#e0f0ed; --sun:#f2b84b;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Noto Sans Devanagari","Kohinoor Devanagari","Nirmala UI",Mukta,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--ink:#e6f1ef; --muted:#9db6b3; --bg:#0b1a1b; --card:#112526; --line:#22403f; --mint:#14302f; --brand:#4fd1c2}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:1.0625rem/1.65 var(--sans);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .6em;color:var(--ink);font-weight:600}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);letter-spacing:-.015em}
+h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+h3{font-size:1.25rem;font-family:var(--sans);font-weight:650}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;background:var(--deep);color:#fff;padding:.7rem 1rem;z-index:10}
+.skip:focus{left:0}
+
+/* header */
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--serif);font-weight:700;font-size:1.2rem;color:var(--ink);text-decoration:none}
+.logo svg{width:34px;height:34px}
+nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
+nav a{color:var(--ink);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--brand)}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;background:var(--brand);color:#fff;font-weight:650;text-decoration:none;border:2px solid var(--brand)}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.sun{background:var(--sun);border-color:var(--sun);color:#1b2a2b}
+@media (prefers-color-scheme:dark){.btn:not(.alt):not(.sun){color:#06201e}}
+
+/* hero */
+.hero{background:var(--deep);color:#eaf6f4;padding:clamp(3rem,8vw,6rem) 0;position:relative;overflow:hidden}
+.hero h1{color:#fff}
+.hero p{color:#c4dcd9;font-size:1.2rem}
+.hero .wrap{display:grid;gap:3rem;grid-template-columns:1.3fr 1fr;align-items:center}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.hero .btn.alt{color:#fff;border-color:#8fb8b3}
+.today{background:var(--card);color:var(--ink);border-radius:20px;padding:1.6rem;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.today h2{font-size:1.25rem;font-family:var(--sans);margin-bottom:1rem}
+.today dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.55rem 1.2rem}
+.today dt{color:var(--muted)}
+.today dd{margin:0;font-weight:600;text-align:right}
+.note{margin:1.1rem 0 0;padding:.8rem 1rem;background:var(--mint);border-radius:12px;font-size:.95rem;max-width:none}
+.cross{position:absolute;right:-60px;bottom:-60px;width:320px;opacity:.07}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+
+/* sections */
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.lead{color:var(--muted);font-size:1.15rem}
+.grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:2rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.5rem}
+.card p{color:var(--muted);margin:0}
+.ico{width:46px;height:46px;border-radius:12px;background:var(--mint);display:grid;place-items:center;margin-bottom:1rem}
+.ico svg{width:24px;height:24px;stroke:var(--brand);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.about{background:var(--mint)}
+.about .wrap{display:grid;gap:3rem;grid-template-columns:1fr 1.4fr;align-items:center}
+.portrait{aspect-ratio:4/5;border-radius:24px;background:linear-gradient(160deg,var(--brand),var(--deep));display:grid;place-items:center;color:#fff;font-family:var(--serif);font-size:5rem}
+.facts{list-style:none;padding:0;margin:1.2rem 0 0;display:grid;gap:.5rem}
+.facts li{padding-left:1.7rem;position:relative}
+.facts li::before{content:"";position:absolute;left:0;top:.55em;width:.9rem;height:.5rem;border-left:3px solid var(--brand);border-bottom:3px solid var(--brand);transform:rotate(-45deg) translateY(-50%)}
+@media (max-width:860px){.about .wrap{grid-template-columns:1fr}.portrait{max-width:280px;aspect-ratio:1}}
+.visit{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-top:2rem}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:.55rem 0;border-bottom:1px solid var(--line)}
+td{text-align:right;font-weight:600}
+.emerg{background:var(--deep);color:#eaf6f4;border-radius:16px;padding:1.5rem;margin-top:1.2rem}
+.emerg a{color:var(--sun);font-weight:700}
+.emerg p{margin:0;max-width:none}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.3rem;margin-bottom:.8rem}
+summary{cursor:pointer;font-weight:650}
+details p{margin:.8rem 0 0;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:110px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;text-align:center}
+.actions{display:flex;gap:.6rem;align-items:center}
+.langbtn{font:inherit;font-weight:600;min-height:48px;min-width:48px;padding:0 1rem;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.langbtn:hover{border-color:var(--brand)}
+html[lang=hi] body{line-height:1.8}
+html[lang=hi] h1,html[lang=hi] h2,html[lang=hi] h3{line-height:1.35;letter-spacing:0}
+.mbar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+  .bar{flex-wrap:wrap;padding:.5rem 0 0}
+  .hcall{display:none}
+  nav{order:3;width:100%}
+  nav ul{overflow-x:auto;gap:1.2rem;white-space:nowrap;scrollbar-width:none}
+  nav ul::-webkit-scrollbar{display:none}
+  nav a{display:block;padding:.7rem .1rem}
+  .cta .btn{flex:1 1 100%}
+  .hero p{font-size:1.1rem}
+  .today{padding:1.3rem}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;position:fixed;left:0;right:0;bottom:0;z-index:6;padding:.7rem 1rem calc(.7rem + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Greenleaf Family Clinic home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0f3d3e"/><path d="M13 7h6v6h6v6h-6v6h-6v-6H7v-6h6z" fill="#fff"/></svg>
+      Greenleaf Clinic
+    </a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#doctor">Your doctor</a></li>
+      <li><a href="#visit">Visit us</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul></nav>
+    <div class="actions"><button id="lang" class="langbtn" type="button" lang="hi" aria-label="हिन्दी में देखें">हिन्दी</button><a class="btn hcall" href="tel:+919876543210">Call to book</a></div>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <svg class="cross" viewBox="0 0 32 32" aria-hidden="true"><path d="M13 0h6v13h13v6H19v13h-6V19H0v-6h13z" fill="#fff"/></svg>
+  <div class="wrap">
+    <div>
+      <h1>Care that listens first.</h1>
+      <p>Greenleaf is a family clinic where you get time with your doctor, clear answers, and a plan you understand. Same-day appointments are usually available.</p>
+      <div class="cta">
+        <a class="btn sun" href="tel:+919876543210">Call +91 98765 43210</a>
+        <a class="btn alt" href="https://wa.me/919876543210">Message on WhatsApp</a>
+      </div>
+    </div>
+    <aside class="today" aria-label="Clinic hours">
+      <h2>Clinic hours</h2>
+      <dl>
+        <dt>Mon – Fri</dt><dd>9:00 am – 7:00 pm</dd>
+        <dt>Saturday</dt><dd>9:00 am – 2:00 pm</dd>
+        <dt>Sunday</dt><dd>Closed</dd>
+      </dl>
+      <p class="note">Walk-ins are welcome. Booking ahead means a shorter wait.</p>
+    </aside>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we treat</h2>
+    <p class="lead">Everyday medical care for children, adults and seniors, all in one place.</p>
+    <div class="grid">
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div><h3>General check-ups</h3><p>Fever, infections, aches, and routine health checks with clear next steps.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.5-9-9a5 5 0 0 1 9-3 5 5 0 0 1 9 3c-2 4.500-9 9-9 9z"/></svg></div><h3>Diabetes and blood pressure</h3><p>Ongoing monitoring, medicine reviews, and diet guidance that fits your life.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20 20 4M14 4l6 6M4 14l6 6"/></svg></div><h3>Vaccinations</h3><p>Childhood schedules, flu, typhoid and travel vaccines, given gently.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg></div><h3>Child and women's health</h3><p>Growth checks, common childhood illness, and women's wellness visits.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><h3>Lab tests and reports</h3><p>Blood tests arranged on site, with results explained in plain language.</p></article>
+      <article class="card"><div class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/></svg></div><h3>Minor procedures</h3><p>Dressings, stitches, injections and nebulisation without a hospital trip.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="doctor" class="about">
+  <div class="wrap">
+    <div class="portrait" role="img" aria-label="Portrait placeholder for Dr. Meera Kulkarni">MK</div>
+    <div>
+      <h2>Meet Dr. Meera Kulkarni</h2>
+      <p>Dr. Kulkarni has spent 15 years caring for families, from newborns to grandparents. She believes the best medicine starts with a proper conversation, so every visit leaves room for your questions.</p>
+      <ul class="facts">
+        <li>MBBS, MD (General Medicine)</li>
+        <li>Registered with the State Medical Council, Reg. No. 00000</li>
+        <li>Speaks English, Hindi and Marathi</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <h2>Visit us</h2>
+    <div class="visit">
+      <div class="card">
+        <h3>Find the clinic</h3>
+        <p>Shop 12, Greenleaf Plaza<br>Main Road, Your Area<br>Your City 000000</p>
+        <p>Parking available behind the building. Ground floor, step-free entrance.</p>
+        <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Greenleaf+Family+Clinic" rel="noopener noreferrer" target="_blank">Open in Maps</a>
+      </div>
+      <div class="card">
+        <h3>Opening times</h3>
+        <table>
+          <tr><th scope="row">Monday – Friday</th><td>9:00 am – 7:00 pm</td></tr>
+          <tr><th scope="row">Saturday</th><td>9:00 am – 2:00 pm</td></tr>
+          <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+        </table>
+        <p style="margin-top:1rem">Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+      </div>
+    </div>
+    <div class="emerg"><p><strong>In an emergency, do not wait for an appointment.</strong> <a href="tel:112">Call 112</a> or go to your nearest hospital.</p></div>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap">
+    <h2>Common questions</h2>
+    <details><summary>Do I need an appointment?</summary><p>No, walk-ins are seen in order of arrival. Calling ahead gives you a fixed time and usually no wait.</p></details>
+    <details><summary>What should I bring?</summary><p>Bring any previous reports, your current medicines (or photos of the strips), and a photo ID.</p></details>
+    <details><summary>How much is a consultation?</summary><p>Please call us for current fees. We accept cash, UPI and major cards.</p></details>
+    <details><summary>Is my information private?</summary><p>Yes. Your records are confidential and shared only with your consent. This website does not collect any personal data.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Greenleaf Family Clinic</span>
+    <span>This website gives general information and is not a substitute for medical advice.</span>
+  </div>
+</footer>
+<div class="mbar"><a class="btn" href="tel:+919876543210">Call</a><a class="btn sun" href="https://wa.me/919876543210">WhatsApp</a></div>
+<script src="lang.js" defer></script>
+</body>
+</html>
